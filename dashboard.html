@@ -1,0 +1,14 @@
+<h2>Your Storage</h2>
+
+<form method="post" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <button>Upload</button>
+</form>
+
+<ul>
+{% for f in files %}
+  <li>{{ f }} - <a href="/download/{{ f }}">Download</a></li>
+{% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
